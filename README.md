@@ -37,55 +37,54 @@ To run this application locally, you will need Python 3.10+ and Node.js installe
 
 ### 1. Clone the Repository
 ```bash
-git clone [https://github.com/Usaf007/Nexus-RAG-Workspace.git](https://github.com/Usaf007/Nexus-RAG-Workspace.git)
-cd Nexus-RAG-Workspace
-
-### 2. Initialize the AI Backend
+git clone [https://github.com/Usaf007/ContextCore-RAG-AI-Workspace.git](https://github.com/Usaf007/ContextCore-RAG-AI-Workspace.git)
+cd  ContextCore-RAG-AI-Workspace
+2. Initialize the AI Backend
 Create and activate a virtual environment:
 
 On Windows:
-```bash
+
+Bash
 python -m venv venv
 venv\Scripts\activate
-
 On Mac/Linux:
-```bash
+
+Bash
 python3 -m venv venv
 source venv/bin/activate
-
 Install the required Python dependencies:
-```bash
+
+Bash
 pip install fastapi uvicorn langchain langchain-google-genai langchain-community pypdf chromadb sentence-transformers langchain-huggingface python-multipart
-
 Create a .env file in the root directory and add your LLM API key:
-```bash
-GOOGLE_API_KEY=your_LLM_api_key
 
+Bash
+LLM_API_KEY=your_LLM_api_key
 Boot the API Server:
-```bash
+
+Bash
 uvicorn main:app
+(The backend will run at [http://127.0.0.1:8000](http://127.0.0.1:8000). The first boot may take a moment to download the HuggingFace model weights locally).
 
-(The backend will run at http://127.0.0.1:8000. The first boot may take a moment to download the HuggingFace model weights locally).
-
-### 3. Initialize the Frontend UI
+3. Initialize the Frontend UI
 Open a secondary terminal and navigate to the frontend directory:
 
-```bash
+Bash
 cd frontend
 npm install
 npm run dev
-
 Navigate to http://localhost:3000 in your browser to access the UI.
 
-## 🤝 Contributing
+🤝 Contributing
+Contributions to ContextCore are welcome. To contribute, please follow the standard fork-and-pull workflow:
 
-Contributions to the Nexus RAG Workspace are welcome. To contribute, please follow the standard fork-and-pull workflow:
+Fork the repository on GitHub.
 
-1. **Fork** the repository on GitHub.
-2. **Clone** your forked repository to your local machine:
-```bash
-git clone [https://github.com/YOUR-USERNAME/ContextCore-RAG-AI-Workspace.git](https://github.com/YOUR-USERNAME/ContextCore-RAG-AI-Workspace.git)
-cd Nexus-RAG-Workspace
+Clone your forked repository to your local machine:
+
+Bash
+git clone https://github.com/CONTRIBUTOR-USERNAME/ContextCore-RAG-AI-Workspace.git
+cd  ContextCore-RAG-AI-Workspace
 Create a Feature Branch for your modifications:
 
 Bash
@@ -99,7 +98,8 @@ git push origin feature/YourFeatureName
 Open a Pull Request against the main branch of this repository.
 
 Please ensure all modifications are thoroughly tested locally before opening a pull request.
-## 📜 License
+
+📜 License
 Distributed under the MIT License. See LICENSE for more information.
 
 Made with Love ❤️
