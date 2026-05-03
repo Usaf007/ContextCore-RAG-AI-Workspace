@@ -66,7 +66,7 @@ pip install fastapi uvicorn langchain langchain-google-genai langchain-community
 ### 3. Configure Environment Variables
 Create a `.env` file in the root directory and add your LLM API key:
 ```env
-GOOGLE_API_KEY=your_api_key_here
+LLM_API_KEY=your_api_key_here
 ```
 
 ### 4. Run the Backend Server
