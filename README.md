@@ -37,81 +37,81 @@ Unlike standard API wrappers, this project employs a **hybrid architecture**: it
 
 ## ⚙️ Installation & Setup
 
-1.  **Clone the repository**
-    ```bash
-    git clone [https://github.com/Usaf007/ContextCore-RAG-AI-WORKSPACE.git](https://github.com/Usaf007/ContextCore-RAG-AI-WORKSPACE.git)
-    cd ContextCore-RAG-AI-WORKSPACE
-    ```
-
-2.  **Initialize the AI Backend**
-    Create and activate a virtual environment:
-
-    **On Windows:**
-    ```bash
-    python -m venv venv
-    venv\Scripts\activate
-    ```
-
-    **On Mac/Linux:**
-    
+### 1. Clone the repository
 ```bash
-    python3 -m venv venv
-    source venv/bin/activate
-    ```
+git clone [https://github.com/Usaf007/ContextCore-RAG-AI-WORKSPACE.git](https://github.com/Usaf007/ContextCore-RAG-AI-WORKSPACE.git)
+cd ContextCore-RAG-AI-WORKSPACE
+```
 
-    Install the required Python dependencies:
-    ```bash
-    pip install fastapi uvicorn langchain langchain-google-genai langchain-community pypdf chromadb sentence-transformers langchain-huggingface python-multipart
-    ```
-    
-3.  **Configure Environment Variables
-    Create a .env file in the root directory and add your LLM API key:
+### 2. Initialize the AI Backend
+Create and activate a virtual environment:
 
-    ```bash
-    LLM_API_KEY=your_api_key_here
-    ```
-4.  **Run the Backend Server
+**On Windows:**
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
 
-    ```bash
-    uvicorn main:app
-    ```
-    (The backend will run at http://127.0.0.1:8000. The first boot may take a moment to download the HuggingFace model weights locally).
+**On Mac/Linux:**
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
 
-5.  **Initialize the Frontend UI
-    Open a secondary terminal and navigate to the frontend directory:
+Install the required Python dependencies:
+```bash
+pip install fastapi uvicorn langchain langchain-google-genai langchain-community pypdf chromadb sentence-transformers langchain-huggingface python-multipart
+```
 
-    ```bash
-    cd frontend
-    npm install
-    npm run dev
-    ```
-    Navigate to http://localhost:3000 in your browser to access the UI.
+### 3. Configure Environment Variables
+Create a `.env` file in the root directory and add your LLM API key:
+```env
+GOOGLE_API_KEY=your_api_key_here
+```
 
-🤝 Contributing
+### 4. Run the Backend Server
+```bash
+uvicorn main:app
+```
+*(The backend will run at `http://127.0.0.1:8000`. The first boot may take a moment to download the HuggingFace model weights locally).*
+
+### 5. Initialize the Frontend UI
+Open a secondary terminal and navigate to the frontend directory:
+```bash
+cd frontend
+npm install
+npm run dev
+```
+Navigate to `http://localhost:3000` in your browser to access the UI.
+
+## 🤝 Contributing
 Contributions to ContextCore are welcome. To contribute, please follow the standard fork-and-pull workflow:
 
-Fork the repository on GitHub.
+1. **Fork** the repository on GitHub.
+2. **Clone** your forked repository to your local machine:
+```bash
+git clone [https://github.com/CONTRIBUTOR-USERNAME/ContextCore-RAG-AI-WORKSPACE.git](https://github.com/CONTRIBUTOR-USERNAME/ContextCore-RAG-AI-WORKSPACE.git)
+cd ContextCore-RAG-AI-WORKSPACE
+```
+3. **Create a Feature Branch** for your modifications:
+```bash
+git checkout -b feature/YourFeatureName
+```
+4. **Commit your changes and Push** to your fork:
+```bash
+git add .
+git commit -m "Description of your changes"
+git push origin feature/YourFeatureName
+```
+5. **Open a Pull Request** against the main branch of this repository.
 
-Clone your forked repository to your local machine:
+Please ensure all modifications are thoroughly tested locally before opening a pull request.
 
-    ```bash
-    git clone [https://github.com/CONTRIBUTOR-USERNAME/ContextCore-RAG-AI-WORKSPACE.git](https://github.com/CONTRIBUTOR-          USERNAME/ContextCore-RAG-AI-WORKSPACE.git)
-    ```
-    cd ContextCore-RAG-AI-WORKSPACE
-    Create a Feature Branch for your modifications:
+## 📜 License
+Distributed under the MIT License. See `LICENSE` for more information.
 
-    ```bash
-    git checkout -b feature/YourFeatureName
-    ```
-    Commit your changes and Push to your fork:
+---
 
-    ```bash
-    git add .
-    git commit -m "Description of your changes"
-    git push origin feature/YourFeatureName
-    Open a Pull Request against the main branch of this repository.
-
-    Please ensure all modifications are thoroughly tested locally before opening a pull request.
-
-📜 License
-Distributed under the MIT License. See LICENSE for more information.
+<p align="center">
+  Made with 💙 and Python by <strong>Usaf</strong>
+</p>
